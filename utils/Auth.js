@@ -45,7 +45,7 @@ const userRegister = async (userDets, role, res) => {
       secure: true,
       auth: {
         user: 'tenminuteversity@gmail.com',
-        pass: '3tabikal'
+        pass: 'qqoxxajatkdljrto'
       }
     });
     

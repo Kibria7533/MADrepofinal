@@ -202,7 +202,7 @@ router.post('/forgotpassordorusername', async (req, res) => {
       service: 'gmail',
       auth: {
         user: 'tenminuteversity@gmail.com',
-        pass: PASSWORD
+        pass: 'qqoxxajatkdljrto'
       }
     });
 
