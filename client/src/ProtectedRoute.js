@@ -11,7 +11,7 @@ class ProtectedRoute extends React.Component {
         let isAuthenticated=false;
         
 
-        if((token && role=="user")||(token && role=="admin")||(token && role=="superadmin"))
+        if((token && role==="user")||(token && role==="admin")||(token && role=="superadmin"))
         isAuthenticated = true;        
         return isAuthenticated ? ( 
             <Component />

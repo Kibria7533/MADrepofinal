@@ -22,7 +22,7 @@ require("./middlewares/passport")(passport);
 
 
 
-const uri = process.env.ATLAS_URI || 'mongodb://localhost:27017/node-auth';
+const uri = 'mongodb+srv://kibria:kibria123@cluster0.ak8uw.mongodb.net/mad-database?retryWrites=true&w=majority'
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

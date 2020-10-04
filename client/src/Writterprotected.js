@@ -10,7 +10,7 @@ class Writterprotected extends React.Component {
         const role=localStorage.getItem('userrole');
         let isAuthenticated=false;
 
-        if((token && role=="admin")||(token && role=="superadmin"))
+        if((token && role==="admin")||(token && role==="superadmin"))
         isAuthenticated = true;        
         return isAuthenticated ? ( 
             <Component />
