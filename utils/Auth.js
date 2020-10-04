@@ -49,7 +49,7 @@ const userRegister = async (userDets, role, res) => {
       }
     });
     
-    var link = 'https://tooltool.herokuapp.com/api/users/active/'
+    var link = 'https://ok-mad.herokuapp.com/api/users/active/'
                          +activeToken;
     var mailOptions = {
       from: 'tenminuteversity@gmail.com',

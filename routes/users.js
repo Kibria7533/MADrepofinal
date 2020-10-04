@@ -174,7 +174,7 @@ router.get('/active/:activeToken', function (req, res, next) {
     }
     user.confirmed = true;
     user.save().then(ok=>{
-      res.redirect(`https://tooltool.herokuapp.com/userlogin`);
+      res.redirect(`https://ok-mad.herokuapp.com/userlogin`);
     })
    
   });
@@ -206,7 +206,7 @@ router.post('/forgotpassordorusername', async (req, res) => {
       }
     });
 
-    var link = `https://tooltool.herokuapp.com/forgotpassword/${forgetpasswordToken}`;
+    var link = `https://ok-mad.herokuapp.com/forgotpassword/${forgetpasswordToken}`;
     let username = emailExist.username;
     var mailOptions = {
       from: 'tenminuteversity@gmail.com',
@@ -268,34 +268,41 @@ checkRole(["superadmin"]),async(req,res)=>{
   const users=await User.find({});
   res.send(users);
 })
-router.get('/getallwritter',async(req,res)=>{
+router.get('/getallwritter',userAuth,
+checkRole(["superadmin"]),async(req,res)=>{
   const users=await User.find({"writterconfirmed":true});
   res.send(users);
 })
-router.get('/getallwritteraplicant',async(req,res)=>{
+router.get('/getallwritteraplicant',userAuth,
+checkRole(["superadmin"]),async(req,res)=>{
   const users=await User.find({"writterconfirmed":false});
   res.send(users);
 })
-router.post('/deleteuser',async(req,res)=>{
+router.post('/deleteuser',userAuth,
+checkRole(["superadmin"]),async(req,res)=>{
   const users=await User.deleteOne({_id:req.body.id});
   res.send(users);
 })
 
-router.post('/deletewritterapplicant',async(req,res)=>{
+router.post('/deletewritterapplicant',userAuth,
+checkRole(["superadmin"]),async(req,res)=>{
   const users=await User.deleteOne({_id:req.body.id});
   res.send(users);
 })
-router.post('/deletewritter',async(req,res)=>{
+router.post('/deletewritter',userAuth,
+checkRole(["superadmin"]),async(req,res)=>{
   const users=await User.deleteOne({_id:req.body.id});
   res.send(users);
 })
 
-router.post('/writterapplicant_to_writter',async(req,res)=>{
+router.post('/writterapplicant_to_writter',userAuth,
+checkRole(["superadmin"]),async(req,res)=>{
   const users=await User.updateOne({_id:req.body.id},
   {$set:{writterconfirmed:true}});
   res.send(users);
 })
-router.post('/change_to_user',async(req,res)=>{
+router.post('/change_to_user',userAuth,
+checkRole(["superadmin"]),async(req,res)=>{
   const users=await User.updateOne({_id:req.body.id},
   {$set:{writterconfirmed:false}});
   res.send(users);
