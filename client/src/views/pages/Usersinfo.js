@@ -16,7 +16,7 @@ class Usersinfo extends Component {
 
 
     componentDidMount(){
-        axios.get(`http://localhost:5000/api/users/getalluser`, {
+        axios.get(`/api/users/getalluser`, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ class Usersinfo extends Component {
         })
     }
     userdelete=async (id)=>{
-       await axios.post(`http://localhost:5000/api/users/deleteuser`,{"id":id}, {
+       await axios.post(`/api/users/deleteuser`,{"id":id}, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',

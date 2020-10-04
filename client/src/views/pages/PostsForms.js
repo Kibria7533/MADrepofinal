@@ -54,7 +54,7 @@ class Forms extends Component {
   }
 
   getall_megamenus_holder = async () => {
-    await axios.get(`http://localhost:5000/getallmegamenuholder`, {
+    await axios.get(`/getallmegamenuholder`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ class Forms extends Component {
     })
   }
   getall_submenu_holder = async () => {
-    await axios.get(`http://localhost:5000/getallsubmenuholder`, {
+    await axios.get(`/getallsubmenuholder`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ class Forms extends Component {
     })
   }
   getonlysimple_menus = async () => {
-    await axios.get(`http://localhost:5000/only_menus`, {
+    await axios.get(`/only_menus`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -118,7 +118,7 @@ class Forms extends Component {
 
     //console.log('select hoder ' + topicholder, 'fetchtype ' + this.state.sub_sub);
     if (this.state.sub_sub && topicholder !== '0') {
-      await axios.post(`http://localhost:5000/get_particuler_submenus`, { "topic": topicholder }, {
+      await axios.post(`/get_particuler_submenus`, { "topic": topicholder }, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
@@ -131,7 +131,7 @@ class Forms extends Component {
       })
     }
     else if (!this.state.sub_sub && topicholder !== '0') {
-      await axios.post(`http://localhost:5000/get_particuler_mega_submenus`, { "topic": topicholder }, {
+      await axios.post(`/get_particuler_mega_submenus`, { "topic": topicholder }, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
@@ -153,7 +153,7 @@ class Forms extends Component {
   postsubmit = async () => {
    
     const { topic, chapter, contentinput, codeinput, longdescriptioninput } = this.state;
-    await axios.post(`http://localhost:5000/createchapter`, { "Topic": topic, "ch": chapter, "intro": contentinput, "code": codeinput, "blogtext": longdescriptioninput }, {
+    await axios.post(`/createchapter`, { "Topic": topic, "ch": chapter, "intro": contentinput, "code": codeinput, "blogtext": longdescriptioninput }, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',

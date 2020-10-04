@@ -38,7 +38,7 @@ const Teachersinfo = () => {
 
     const deletefn = async (id) => {
 
-        await axios.delete(`http://localhost:5000/deleteteacher/${id}`, {
+        await axios.delete(`/deleteteacher/${id}`, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -135,7 +135,7 @@ const Teachersinfo = () => {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/getteacher`, {
+        axios.get(`/getteacher`, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',

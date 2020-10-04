@@ -51,7 +51,7 @@ class makequestion extends Component {
   }
   getquestions=async(e)=>{
     e.preventDefault();
-    await axios.post(`http://localhost:5000/getallquestionsbynumber`,{
+    await axios.post(`/getallquestionsbynumber`,{
       "classname":this.state.class,
     "dept":this.state.dept,
     "sub":this.state.sub,

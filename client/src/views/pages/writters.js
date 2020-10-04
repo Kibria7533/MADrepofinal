@@ -17,7 +17,7 @@ class writters extends Component {
 
 
     componentDidMount(){
-        axios.get(`http://localhost:5000/api/users/getallwritter`, {
+        axios.get(`/api/users/getallwritter`, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ class writters extends Component {
         })
     }
     changetouser=async(id)=>{
-        axios.post(`http://localhost:5000/api/users/getallwritter`, {
+        axios.post(`/api/users/getallwritter`, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ class writters extends Component {
     }
 
     wrriterdelete=async(id)=>{
-        axios.post(`http://localhost:5000/api/users/deletewritter`,{"id":id}, {
+        axios.post(`/api/users/deletewritter`,{"id":id}, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ class writters extends Component {
 
     }
     change_to_user=async (id)=>{
-        await axios.post(`http://localhost:5000/api/users/change_to_user`,{"id":id}, {
+        await axios.post(`/api/users/change_to_user`,{"id":id}, {
              headers: {
                  'Accept': 'application/json',
                  'Content-Type': 'application/json',

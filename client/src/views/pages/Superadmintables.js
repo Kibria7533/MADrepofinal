@@ -11,7 +11,7 @@ const Superadmintables = () => {
 
     useEffect(() => {
 
-        axios.get(`http://localhost:5000/getall`, {
+        axios.get(`/getall`, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',

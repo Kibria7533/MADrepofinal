@@ -8,7 +8,7 @@ class Homecourse extends Component {
     }
   }
   componentDidMount(){
-    axios.get(`http://localhost:5000/getcourse`, {
+    axios.get(`/getcourse`, {
       headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',

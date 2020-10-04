@@ -11,7 +11,7 @@ class Topicstable extends Component {
     }
   }
   async componentDidMount() {
-    await axios.get(`http://localhost:5000/allmenus`, {
+    await axios.get(`/allmenus`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ class Topicstable extends Component {
     })
   }
   deletesimplemenu = async (topic) => {
-    await axios.post(`http://localhost:5000/deleteasimplemenue`, { "topic": topic }, {
+    await axios.post(`/deleteasimplemenue`, { "topic": topic }, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ class Topicstable extends Component {
     }).then(async (data) => {
       this.componentDidMount();
 
-      await axios.post(`http://localhost:5000/removetopic`, { "Topic": topic }, {
+      await axios.post(`/removetopic`, { "Topic": topic }, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ class Topicstable extends Component {
          
           value.submenus.map(async (subdata) => {
 
-            await axios.post(`http://localhost:5000/removetopic`, { "Topic": subdata }, {
+            await axios.post(`/removetopic`, { "Topic": subdata }, {
               headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ class Topicstable extends Component {
       })
     }
 
-    await axios.post(`http://localhost:5000/delete_a_subholeder`, { "subholder": submenholder }, {
+    await axios.post(`/delete_a_subholeder`, { "subholder": submenholder }, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ class Topicstable extends Component {
   }
   delete_sub_submenu = async (submenuholder, submenu) => {
 
-    await axios.post(`http://localhost:5000/delete_a_sub_submenu`, { submenuholder, submenu }, {
+    await axios.post(`/delete_a_sub_submenu`, { submenuholder, submenu }, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ class Topicstable extends Component {
       }
     }).then(async (data) => {
       this.componentDidMount();
-      await axios.post(`http://localhost:5000/removetopic`, { "Topic": submenu }, {
+      await axios.post(`/removetopic`, { "Topic": submenu }, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
@@ -123,7 +123,7 @@ class Topicstable extends Component {
        
         value.submenus.map(async (subdata) => {
 
-          await axios.post(`http://localhost:5000/removetopic`, { "Topic": subdata }, {
+          await axios.post(`/removetopic`, { "Topic": subdata }, {
             headers: {
               'Accept': 'application/json',
               'Content-Type': 'application/json',
@@ -135,7 +135,7 @@ class Topicstable extends Component {
     })
   }
 
-    await axios.post(`http://localhost:5000/delete_a_megaholder`, { megaholder }, {
+    await axios.post(`/delete_a_megaholder`, { megaholder }, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -148,7 +148,7 @@ class Topicstable extends Component {
     })
   }
   delete_sub_mega = async (megamenuholder, submenu) => {
-    await axios.post(`http://localhost:5000/delete_a_sub_megamenu`, { megamenuholder, submenu }, {
+    await axios.post(`/delete_a_sub_megamenu`, { megamenuholder, submenu }, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -156,7 +156,7 @@ class Topicstable extends Component {
       }
     }).then(async (data) => {
       this.componentDidMount();
-      await axios.post(`http://localhost:5000/removetopic`, { "Topic": submenu }, {
+      await axios.post(`/removetopic`, { "Topic": submenu }, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',

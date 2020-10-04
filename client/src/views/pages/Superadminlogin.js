@@ -41,7 +41,7 @@ savetostate=async (data)=>{
 }
 formsubmit=async (data)=>{
   data.preventDefault();
-  await axios.post('http://localhost:5000/api/users/login-super-admin', {
+  await axios.post('/api/users/login-super-admin', {
     "username": this.state.username,
     "password": this.state.password,
   },{

@@ -14,7 +14,7 @@ class Header extends Component {
     }
   }
   async componentDidMount() {
-    await axios.get(`http://localhost:5000/allmenus`, {
+    await axios.get(`/allmenus`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',

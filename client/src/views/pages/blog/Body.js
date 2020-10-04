@@ -32,7 +32,7 @@ class Body extends Component {
     this.commentfetch(chname);
     this.reletedpostsfetch(chname);
     const { topic } = this.state;
-    await axios.post(`http://localhost:5000/getchapter`, { "Topic": topic, "ch": chname }, {
+    await axios.post(`/getchapter`, { "Topic": topic, "ch": chname }, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ class Body extends Component {
   }
   commentfetch = async (cname) => {
     const { topic } = this.state;
-    await axios.post(`http://localhost:5000/allcomments`, { "Topic": topic, "ch": cname }, {
+    await axios.post(`/allcomments`, { "Topic": topic, "ch": cname }, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -65,7 +65,7 @@ class Body extends Component {
   }
   reletedpostsfetch = async (ccname) => {
     const { topic } = this.state;
-    await axios.post(`http://localhost:5000/reletedposts`, { "Topic": topic, "ch": ccname }, {
+    await axios.post(`/reletedposts`, { "Topic": topic, "ch": ccname }, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -85,7 +85,7 @@ class Body extends Component {
   async componentDidMount() {
     console.log('hi component did mount');
     console.log(this.state.topic)
-    await axios.post(`http://localhost:5000/allchapter/${this.state.topic}`, {
+    await axios.post(`/allchapter/${this.state.topic}`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -106,7 +106,7 @@ class Body extends Component {
     console.log(topic.match.params.html)
     this.setState({topic:topic.match.params.html})
    
-    await axios.post(`http://localhost:5000/allchapter/${topic.match.params.html}`, {
+    await axios.post(`/allchapter/${topic.match.params.html}`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',

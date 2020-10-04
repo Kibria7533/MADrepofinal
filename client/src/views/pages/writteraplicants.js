@@ -16,7 +16,7 @@ class writteraplicants extends Component {
 
 
    async componentDidMount(){
-       await axios.get(`http://localhost:5000/api/users/getallwritteraplicant`, {
+       await axios.get(`/api/users/getallwritteraplicant`, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ class writteraplicants extends Component {
         })
     }
     deletewritteraplicant=async (id)=>{
-       await axios.post(`http://localhost:5000/api/users/deletewritterapplicant`,{"id":id}, {
+       await axios.post(`/api/users/deletewritterapplicant`,{"id":id}, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ class writteraplicants extends Component {
         })
     }
     writterapplicant_to_writter=async (id)=>{
-        await axios.post(`http://localhost:5000/api/users/writterapplicant_to_writter`,{"id":id}, {
+        await axios.post(`/api/users/writterapplicant_to_writter`,{"id":id}, {
              headers: {
                  'Accept': 'application/json',
                  'Content-Type': 'application/json',

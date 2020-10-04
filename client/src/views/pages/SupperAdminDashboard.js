@@ -41,7 +41,7 @@ const WritterDashboard = () => {
 
 
     const deletefn = async ({ topic, ch }) => {
-        await axios.post(`http://localhost:5000/deletechapter`, { topic, ch }, {
+        await axios.post(`/deletechapter`, { topic, ch }, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ const WritterDashboard = () => {
     const setedit = async (Topic, ch) => {
         setTopic(Topic);
         setCh(ch);
-        await axios.post(`http://localhost:5000/getchapter`, { Topic, ch }, {
+        await axios.post(`/getchapter`, { Topic, ch }, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ const Longdescriptioninput=(e)=>{
 }
 
 const saveedit=async ()=>{
-   await axios.post(`http://localhost:5000/updatechapter`,{"Topic":Topic,"ch":ch,"ech":editablechapter,"eintro":contentinput,"ecode":codeinput,"eblogtext":longdescriptioninput
+   await axios.post(`/updatechapter`,{"Topic":Topic,"ch":ch,"ech":editablechapter,"eintro":contentinput,"ecode":codeinput,"eblogtext":longdescriptioninput
 },{
         headers: {
             'Accept': 'application/json',
@@ -117,7 +117,7 @@ const saveedit=async ()=>{
     useEffect(() => {
 
         console.log(localStorage.getItem('auth'))
-        axios.get(`http://localhost:5000/getall`, {
+        axios.get(`/getall`, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',

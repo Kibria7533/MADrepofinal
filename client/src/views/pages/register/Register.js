@@ -52,7 +52,7 @@ class Register extends Component {
 
   formsubmit = async (data) => {
     data.preventDefault();
-    await axios.post('http://localhost:5000/api/users/register-user', {
+    await axios.post('/api/users/register-user', {
       "fullname": this.state.fullname,
       "email": this.state.email,
       "username": this.state.username,
@@ -84,7 +84,7 @@ class Register extends Component {
    
   }
   SresponseGoogle = (response) => {
-    axios.post('http://localhost:5000/google', { tokenId: response.tokenId }, {
+    axios.post('/google', { tokenId: response.tokenId }, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -101,7 +101,7 @@ class Register extends Component {
   }
   responseFacebook =async (response) => {
     
-    await axios.post('http://localhost:5000/facebook', { accessToken: response.accessToken,userId:response.userID }, {
+    await axios.post('/facebook', { accessToken: response.accessToken,userId:response.userID }, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'

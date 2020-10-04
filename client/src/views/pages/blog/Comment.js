@@ -14,7 +14,7 @@ class Comment extends Component {
   onsubmit = async (e) => {
     e.preventDefault();
     const {message}=this.state;
-    await axios.post(`http://localhost:5000/savecomment`,{ "Topic":this.props.topic, "ch": this.props.cha,"username":localStorage.getItem('username'), "message":message}, {
+    await axios.post(`/savecomment`,{ "Topic":this.props.topic, "ch": this.props.cha,"username":localStorage.getItem('username'), "message":message}, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',

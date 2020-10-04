@@ -37,7 +37,7 @@ const Homeinfo = () => {
 
     const deletefn = async (id) => {
       
-        await axios.delete(`http://localhost:5000/deletecourse/${id}`, {
+        await axios.delete(`/deletecourse/${id}`, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ const Homeinfo = () => {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/getcourse`, {
+        axios.get(`/getcourse`, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',

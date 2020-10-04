@@ -53,7 +53,7 @@ class Forms extends Component {
 
     }
     getall_megamenus_holder=async()=>{
-      await axios.get(`http://localhost:5000/getallmegamenuholder`, {
+      await axios.get(`/getallmegamenuholder`, {
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ class Forms extends Component {
         })
   }
   getall_submenu_holder=async()=>{
-      await axios.get(`http://localhost:5000/getallsubmenuholder`, {
+      await axios.get(`/getallsubmenuholder`, {
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ class Forms extends Component {
                e.preventDefault();
                const {topic}=this.state
            
-               await axios.post(`http://localhost:5000/${this.state.fetchtype}`, {
+               await axios.post(`/${this.state.fetchtype}`, {
                 "Topic": topic,
               }, {
                 headers: {
@@ -109,7 +109,7 @@ class Forms extends Component {
     megamenusubmit=async (e)=>{
         e.preventDefault();
         const {megaholderselect,megamenutopic}=this.state;
-        await axios.post(`http://localhost:5000/add_sub_menu_on_megamenu_holder`,{"name":megaholderselect,"Topic":megamenutopic}, {
+        await axios.post(`/add_sub_menu_on_megamenu_holder`,{"name":megaholderselect,"Topic":megamenutopic}, {
             headers: {
               'Accept': 'application/json',
               'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ class Forms extends Component {
   subsubmenusubmit=async (e)=>{
         e.preventDefault();
         const {subholderselect,submenutopic}=this.state;
-        await axios.post(`http://localhost:5000/add_submenu_on_submenuholder`,{"name":subholderselect,"Topic":submenutopic}, {
+        await axios.post(`/add_submenu_on_submenuholder`,{"name":subholderselect,"Topic":submenutopic}, {
             headers: {
               'Accept': 'application/json',
               'Content-Type': 'application/json',

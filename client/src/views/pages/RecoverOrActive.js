@@ -26,7 +26,7 @@ class RecoverOrActive extends Component {
     }
     sub=async (e)=>{
         e.preventDefault();
-        await axios.post('http://localhost:5000/api/users/forgotpassordorusername',this.state,{
+        await axios.post('/api/users/forgotpassordorusername',this.state,{
             headers:{
               'Accept':'application/json',
               'Content-Type':'application/json'

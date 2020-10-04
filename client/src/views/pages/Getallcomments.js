@@ -40,7 +40,7 @@ class Getallcomments extends Component {
     }
   
     async componentDidMount(){
-        axios.get(`http://localhost:5000/getalltopics`, {
+        axios.get(`/getalltopics`, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ class Getallcomments extends Component {
         else{
              this.setState({topic:e.target.value});
              
-            await axios.post(`http://localhost:5000/allchapter/${e.target.value}`, {
+            await axios.post(`/allchapter/${e.target.value}`, {
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ class Getallcomments extends Component {
     settopic=async(e)=>{
         this.setState({chapter:e.target.value,showreletedpostform:true});
         const {topic}=this.state;
-        await axios.post(`http://localhost:5000/allcomments`,{"Topic":topic,"ch":e.target.value}, {
+        await axios.post(`/allcomments`,{"Topic":topic,"ch":e.target.value}, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ class Getallcomments extends Component {
              else {
                alert('No Comment to show')}
            // console.log(val.data[0].comments[0].comment);
-           await axios.post(`http://localhost:5000/reletedposts`,{"Topic":topic,"ch":this.state.chapter}, {
+           await axios.post(`/reletedposts`,{"Topic":topic,"ch":this.state.chapter}, {
           headers: {
               'Accept': 'application/json',
               'Content-Type': 'application/json',
@@ -127,7 +127,7 @@ class Getallcomments extends Component {
   refresh=async()=>{
     this.setState({showreletedpostform:false})
     const {topic,chapter}=this.state;
-    await axios.post(`http://localhost:5000/reletedposts`,{"Topic":topic,"ch":chapter}, {
+    await axios.post(`/reletedposts`,{"Topic":topic,"ch":chapter}, {
       headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
@@ -156,7 +156,7 @@ class Getallcomments extends Component {
         else{
              this.setState({relposttopic:e.target.value});
              
-              await axios.post(`http://localhost:5000/allchapter/${e.target.value}`, {
+              await axios.post(`/allchapter/${e.target.value}`, {
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json',
@@ -181,7 +181,7 @@ class Getallcomments extends Component {
     addreleted=async(e)=>{
       e.preventDefault();
       const {topic,chapter,relchapter}=this.state;
-      await axios.post(`http://localhost:5000/addreletedpost`,{"relted":relchapter,"Topic":topic,"ch":chapter} ,{
+      await axios.post(`/addreletedpost`,{"relted":relchapter,"Topic":topic,"ch":chapter} ,{
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -205,7 +205,7 @@ class Getallcomments extends Component {
     deletecomment=async (username,comment)=>{
       
       const{topic,chapter}=this.state
-      await axios.post(`http://localhost:5000/deleteacomment`,{"topic":topic,"username":username,"ch":chapter,"comment":comment} ,{
+      await axios.post(`/deleteacomment`,{"topic":topic,"username":username,"ch":chapter,"comment":comment} ,{
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -213,7 +213,7 @@ class Getallcomments extends Component {
         }
     }).then(async(val) => {
         
-      await axios.post(`http://localhost:5000/allcomments`,{"Topic":topic,"ch":chapter}, {
+      await axios.post(`/allcomments`,{"Topic":topic,"ch":chapter}, {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -237,7 +237,7 @@ class Getallcomments extends Component {
     deletereletedpost=async (reletedpost)=>{
       
       const{topic,chapter}=this.state
-      await axios.post(`http://localhost:5000/deleteareletedpost`,{"topic":topic,"reletedpost":reletedpost,"ch":chapter} ,{
+      await axios.post(`/deleteareletedpost`,{"topic":topic,"reletedpost":reletedpost,"ch":chapter} ,{
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -245,7 +245,7 @@ class Getallcomments extends Component {
         }
     }).then(async(val) => {
         
-      await axios.post(`http://localhost:5000/reletedposts`,{"Topic":topic,"ch":chapter}, {
+      await axios.post(`/reletedposts`,{"Topic":topic,"ch":chapter}, {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',

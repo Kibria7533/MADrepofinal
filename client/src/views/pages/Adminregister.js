@@ -55,7 +55,7 @@ class Adminregister extends Component {
 
   formsubmit = async (data) => {
     data.preventDefault();
-    await axios.post('http://localhost:5000/api/users/register-admin', {
+    await axios.post('/api/users/register-admin', {
       "fullname": this.state.fullname,
       "EducationLevel":this.state.EducationLevel,
       "eductioninstitute":this.state.eductioninstitute,
