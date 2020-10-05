@@ -4,10 +4,10 @@ const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 const { SECRET } = require("../config");
 const { response } = require("express");
-const client = new OAuth2Client('255391627954-db7ql852ppnpie0iflmk23fhabuff7lv.apps.googleusercontent.com');
-router.post('/google',  async (req, res) => {
+const client = new OAuth2Client('255391627954-ns76akj2cfe49brdb9l4ndoktmvt2ret.apps.googleusercontent.com');
+router.post('/google',   (req, res) => {
   const {tokenId}=req.body;
-   client.verifyIdToken({ idToken: tokenId, audience: "255391627954-db7ql852ppnpie0iflmk23fhabuff7lv.apps.googleusercontent.com" }).then(response => {
+   client.verifyIdToken({ idToken: tokenId, audience: "255391627954-ns76akj2cfe49brdb9l4ndoktmvt2ret.apps.googleusercontent.com" }).then(response => {
    User.findOne({ 'email': response.payload.email })
       .then((user) => {
         if (!user) {

@@ -179,7 +179,7 @@ class Register extends Component {
                     <CCol xs="12" sm="6">
 
                       <GoogleLogin
-                        clientId="255391627954-db7ql852ppnpie0iflmk23fhabuff7lv.apps.googleusercontent.com"
+                        clientId="255391627954-ns76akj2cfe49brdb9l4ndoktmvt2ret.apps.googleusercontent.com"
                         buttonText="google Login"
                         onSuccess={this.SresponseGoogle}
                         onFailure={this.FresponseGoogle}
