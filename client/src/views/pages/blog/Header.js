@@ -68,7 +68,7 @@ class Header extends Component {
 
 
 <div className="mymegamenu" >
-              <button className="dropbtn"><NavLink to="/css">Cse_Study<i className="fa fa-caret-down"></i></NavLink>
+              <button className="dropbtn"><NavLink to="/">Cse_Study<i className="fa fa-caret-down"></i></NavLink>
               </button>
 
               <div className="mymegamenu-content">
@@ -96,7 +96,7 @@ class Header extends Component {
             </div>
 
             <div className="mymegamenu" >
-              <button className="dropbtn"><NavLink to="/css">Programming-Q<i className="fa fa-caret-down"></i></NavLink>
+              <button className="dropbtn"><NavLink to="/">Programming-Q<i className="fa fa-caret-down"></i></NavLink>
               </button>
 
               <div className="mymegamenu-content">
