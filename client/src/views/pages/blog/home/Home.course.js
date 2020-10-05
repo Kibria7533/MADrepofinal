@@ -44,7 +44,7 @@ class Homecourse extends Component {
       return(
         <div key={index} className="col-lg-4  col-md-4 col-sm-4 justify-content-center" data-scroll-reveal="enter from the bottom after 0.4s">
         <div className="about-div">
-        <img src={`./uploads/${data.image}`} className="rounded-circle" alt="Cinque Terre" width="204" height="136"/> 
+        <img src={`./uploads/${data.image}`} className="rounded-circle" alt="" width="204" height="136"/> 
       <h3>{data.title}</h3>
           <hr />
           <hr />

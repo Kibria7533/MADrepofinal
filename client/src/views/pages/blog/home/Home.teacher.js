@@ -6,7 +6,7 @@ class Hometeacher extends Component {
         data: []
     }
     async componentDidMount() {
-        await axios.get(`http://localhost:5000/getteacher`, {
+        await axios.get(`/getteacher`, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ class Hometeacher extends Component {
                                 return (
                                     <div key={index} className="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
                                         <div className="faculty-div">
-                                            <img src={`./uploads/${item.image}`} className="img-rounded" style={{ "height": "300px", "width": "300px" }} alt="No  Found" />
+                                            <img src={`./uploads/${item.image}`} className="img-rounded" style={{ "height": "300px", "width": "300px" }} alt="" />
                                             <h3>{item.title} </h3>
                                             <hr />
                                             <h4>{item.degignation}</h4>
