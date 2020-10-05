@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {  NavLink } from 'react-router-dom';
+import {  NavLink,Link } from 'react-router-dom';
 
 
 import axios from 'axios';
@@ -75,21 +75,21 @@ class Header extends Component {
                 <div className="row">
                   <div className="column">
                     <h3>Robotics</h3>
-                    <a href="topic/Raspberrypy">Raspberry py</a>
-                    <a href="topic/Aurduno">Aurduno</a>
-                    <a href="topic/Humanoid">Humanoid</a>
+                    <Link to="topic/Raspberrypy">Raspberry py</Link>
+                    <Link to="topic/Aurduno">Aurduno</Link>
+                    <Link to="topic/Humanoid">Humanoid</Link>
                   </div>
                   <div className="column">
                     <h3>Networking</h3>
-                    <a href="topic/Theory">Theory</a>
-                    <a href="topic/Cisco">Cisco</a>
-                    <a href="topic/Practicals">Practicals</a>
+                    <Link to="topic/Theory">Theory</Link>
+                    <Link to="topic/Cisco">Cisco</Link>
+                    <Link to="topic/Practicals">Practicals</Link>
                   </div>
                   <div className="column">
                     <h3>Others</h3>
-                    <a href="topic/Algorithoms">Algorithoms</a>
-                    <a href="topic/Autometa">Autometa</a>
-                    <a href="topic/codecheflebel3">Computer Archetectur</a>
+                    <Link to="topic/Algorithoms">Algorithoms</Link>
+                    <Link to="topic/Autometa">Autometa</Link>
+                    <Link to="topic/codecheflebel3">Computer Archetectur</Link>
                   </div>
                 </div>
               </div>
@@ -103,21 +103,21 @@ class Header extends Component {
                 <div className="row">
                   <div className="column">
                     <h3>UVA</h3>
-                    <a href="topic/ulebel1">Level-1</a>
-                    <a href="topic/ulebel2">Level-2</a>
-                    <a href="topic/ulebel3">Level-3</a>
+                    <Link to="topic/ulebel1">Level-1</Link>
+                    <Link to="topic/ulebel2">Level-2</Link>
+                    <Link to="topic/ulebel3">Level-3</Link>
                   </div>
                   <div className="column">
                     <h3>Codeforces</h3>
-                    <a href="topic/Codeforceslebel1">Level-1</a>
-                    <a href="topic/Codeforceslebel2">Level-2</a>
-                    <a href="topic/Codeforceslebel3">Level-3</a>
+                    <Link to="topic/Codeforceslebel1">Level-1</Link>
+                    <Link to="topic/Codeforceslebel2">Level-2</Link>
+                    <Link to="topic/Codeforceslebel3">Level-3</Link>
                   </div>
                   <div className="column">
                     <h3>Codecheaf</h3>
-                    <a href="topic/codecheflebel1">Level-1</a>
-                    <a href="topic/codecheflebel2">Level-2</a>
-                    <a href="topic/codecheflebel3">Level-3</a>
+                    <Link to="topic/codecheflebel1">Level-1</Link>
+                    <Link to="topic/codecheflebel2">Level-2</Link>
+                    <Link to="topic/codecheflebel3">Level-3</Link>
                   </div>
                 </div>
               </div>
@@ -129,7 +129,7 @@ class Header extends Component {
               <button className="subnavbtn"><NavLink to="/makequestion">Make Question</NavLink> </button>
             </div>
             <div className="subnav">
-              <button className="subnavbtn"><a href="https://kb-quiz.herokuapp.com/" target="_blank">Play Quiz</a></button>
+              <button className="subnavbtn"><Link to="https://kb-quiz.herokuapp.com/" target="_blank">Play Quiz</Link></button>
             </div>
             
 
