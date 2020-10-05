@@ -3,6 +3,7 @@ import {  NavLink,Link } from 'react-router-dom';
 
 
 import axios from 'axios';
+import SideNavPage from '../SideNavPage';
 
 class Header extends Component {
   constructor() {
@@ -75,21 +76,21 @@ class Header extends Component {
                 <div className="row">
                   <div className="column">
                     <h3>Robotics</h3>
-                    <Link to="topic/Raspberrypy">Raspberry py</Link>
-                    <Link to="topic/Aurduno">Aurduno</Link>
-                    <Link to="topic/Humanoid">Humanoid</Link>
+                    <Link to="/Raspberrypy">Raspberry py</Link>
+                    <Link to="/Aurduno">Aurduno</Link>
+                    <Link to="/Humanoid">Humanoid</Link>
                   </div>
                   <div className="column">
                     <h3>Networking</h3>
-                    <Link to="topic/Theory">Theory</Link>
-                    <Link to="topic/Cisco">Cisco</Link>
-                    <Link to="topic/Practicals">Practicals</Link>
+                    <Link to="/Theory">Theory</Link>
+                    <Link to="/Cisco">Cisco</Link>
+                    <Link to="/Practicals">Practicals</Link>
                   </div>
                   <div className="column">
                     <h3>Others</h3>
-                    <Link to="topic/Algorithoms">Algorithoms</Link>
-                    <Link to="topic/Autometa">Autometa</Link>
-                    <Link to="topic/codecheflebel3">Computer Archetectur</Link>
+                    <Link to="/Algorithoms">Algorithoms</Link>
+                    <Link to="/Autometa">Autometa</Link>
+                    <Link to="/codecheflebel3">Computer Archetectur</Link>
                   </div>
                 </div>
               </div>
@@ -103,21 +104,21 @@ class Header extends Component {
                 <div className="row">
                   <div className="column">
                     <h3>UVA</h3>
-                    <Link to="topic/ulebel1">Level-1</Link>
-                    <Link to="topic/ulebel2">Level-2</Link>
-                    <Link to="topic/ulebel3">Level-3</Link>
+                    <Link to="/ulebel1">Level-1</Link>
+                    <Link to="/ulebel2">Level-2</Link>
+                    <Link to="/ulebel3">Level-3</Link>
                   </div>
                   <div className="column">
                     <h3>Codeforces</h3>
-                    <Link to="topic/Codeforceslebel1">Level-1</Link>
-                    <Link to="topic/Codeforceslebel2">Level-2</Link>
-                    <Link to="topic/Codeforceslebel3">Level-3</Link>
+                    <Link to="/Codeforceslebel1">Level-1</Link>
+                    <Link to="/Codeforceslebel2">Level-2</Link>
+                    <Link to="/Codeforceslebel3">Level-3</Link>
                   </div>
                   <div className="column">
                     <h3>Codecheaf</h3>
-                    <Link to="topic/codecheflebel1">Level-1</Link>
-                    <Link to="topic/codecheflebel2">Level-2</Link>
-                    <Link to="topic/codecheflebel3">Level-3</Link>
+                    <Link to="/codecheflebel1">Level-1</Link>
+                    <Link to="/codecheflebel2">Level-2</Link>
+                    <Link to="/codecheflebel3">Level-3</Link>
                   </div>
                 </div>
               </div>
@@ -157,6 +158,7 @@ class Header extends Component {
           </div>
 
         </div>
+      
       </div>
 
 
