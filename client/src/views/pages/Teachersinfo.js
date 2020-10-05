@@ -203,7 +203,7 @@ const Teachersinfo = () => {
                                         </td>
                                         <td><a href={`${item.websites}`} target="_blank">see  live</a>
                                         </td>
-                                        <td><img src={`./uploads/${item.image}`} width="50" height="50" /></td>
+                                        <td><img src={`./uploads/${item.image}`} width="50" height="50" alt="" /></td>
                                         <td> <button type="submit" className="btn btn-primary" onClick={() => setedit(item._id, item.title, item.text, item.degignation, item.websites, item.image)} className="mr-1">Edit</button><button type="button" className="mr-1" onClick={() => deletefn(item._id)}>Delete</button> </td>
 
 

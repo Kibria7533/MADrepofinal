@@ -33,7 +33,7 @@ const storage = multer.diskStorage({
           image:req.file.filename,  
        })
        Teachers.save().then(data=>{
-          res.sendStatus(200)
+          res.send(data)
        }).catch(error=>{
           res.send('errr')
        })
@@ -42,13 +42,12 @@ const storage = multer.diskStorage({
     })
  })
 
- router.get('/getteacher',
- userAuth,
- checkRole(["superadmin"]),async(req,res)=>{
+ router.get('/getteacher',async(req,res)=>{
     const data=await Teacher.find({});
     res.send(data);
  })
- router.delete('/deleteteacher/:id',async(req,res)=>{
+ router.delete('/deleteteacher/:id',userAuth,
+ checkRole(["superadmin"]),async(req,res)=>{
    
    const data=await Teacher.deleteOne({_id:req.params.id});
    res.send(data);
