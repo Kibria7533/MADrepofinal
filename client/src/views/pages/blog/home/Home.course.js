@@ -7,8 +7,8 @@ class Homecourse extends Component {
       data:[]
     }
   }
-  componentDidMount(){
-    axios.get(`/getcourse`, {
+ async componentDidMount(){
+   await axios.get(`/getcourse`, {
       headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
